@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projet Documents — Commander</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <h1>Déposer un document</h1>
+  <form id="orderForm" method="post" action="/api/commandes/create" enctype="multipart/form-data">
+    <input name="nom" placeholder="Nom" required>
+    <input name="email" placeholder="Email" required>
+    <input name="telephone" placeholder="Téléphone" required>
+    <input name="type_document" placeholder="Type documentaire">
+    <textarea name="instructions" placeholder="Instructions"></textarea>
+    <input type="file" name="fichier">
+    <button type="submit">Envoyer</button>
+  </form>
+</body>
+</html>
