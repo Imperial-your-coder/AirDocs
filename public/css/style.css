@@ -3,6 +3,7 @@
         display: none;
     }
     .main::after{
+        background: radial-gradient(ellipse at 0 100%, #34302f 40%, #854403 100%);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -10,7 +11,7 @@
         padding: 8vh;
         box-sizing: border-box;
         color: #fffa;
-        content: 'This application is not available on large screens. Please use a device with a smaller screen.';
+        content: 'This application is not yet available on large screens. Please use a device with a smaller screen.';
         width: 100%;
         height: 100%;
         position: absolute;
@@ -54,6 +55,10 @@ h1, h2, h3, h4, h5, h6{
 .legends{
     padding-bottom: 20vh;
     z-index: 10;
+    transition: opacity 0.4s;
+}
+.legends.hidden{
+    opacity: 0;
 }
 .legends h1{
     font-weight: 500;
@@ -75,6 +80,8 @@ h1, h2, h3, h4, h5, h6{
     -webkit-backdrop-filter: blur(5px);
     -moz-backdrop-filter: blur(5px);
     border-radius: calc(3vh / 0.618);
+    transition: height 0.2s ease;
+    box-shadow: 0.5px 0 15px #00000038;
 }
 .dyBox.primary{
     height: 10vh;
@@ -104,9 +111,16 @@ h1, h2, h3, h4, h5, h6{
     padding-left: calc(2vh / 0.618);
     box-sizing: border-box;
     font-size: 0.9em;
+    user-select: none;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+.left-section.hidden{
+    opacity: 0;
+    visibility: hidden;
 }
 .upload-btn{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 10vh;
@@ -114,10 +128,14 @@ h1, h2, h3, h4, h5, h6{
     scale: 0.85;
     border-radius: 50%;
     background: #fff;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+.upload-btn.hidden{
+    opacity: 0;
+    visibility: hidden;
 }
 .upload-btn .icon.new-file{
-    fill: #136cb9;
+    fill: #000;
     width: 2.25em;
     height: 2.25em;
-
 }
