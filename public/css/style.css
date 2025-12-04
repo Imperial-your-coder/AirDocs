@@ -1,6 +1,7 @@
 body{
     background: #000;
     font-family: 'Avenir';
+    color: #fff;
 }
 h1, h2, h3, h4, h5, h6{
     padding: 0;
@@ -8,29 +9,62 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Avenir Next';
 }
 .main{
+    background-image: url('../images/bg01.jpeg');
     display: flex;
     flex-direction: column;
     justify-content: end;
     width: 100%;
     height: 100%;
-    background: #eee;
+    /* background: #eee; */
     position: absolute;
     inset: 0;
     border-radius: 2vh;
-    padding: 1vh;
+    padding: calc(1vh / 0.618); 
     box-sizing: border-box;
+}
+.main::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 0 100%, #070200cc 40%, #85440399 100%);
+    pointer-events: none;
 }
 .legends{
     padding-bottom: 20vh;
+    z-index: 10;
 }
 .legends h1{
     font-weight: 500;
 }
-.dyBox{
+.dyBox-container{
     width: 100%;
     height: fit-content;
-    height: 80vh;
-    /* position: absolute; */
-    background: orange;
-    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: calc(1vh / 0.618);
+    box-sizing: border-box;
+    z-index: 10;
+}
+.dyBox{
+    width: 100%;
+    background: #fff3;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+    border-radius: calc(3vh / 0.618);
+}
+.dyBox.primary{
+    height: 10vh;
+}
+.dyBox.secondary{
+    height: 22vh;
+}
+.dyBox.tertiary{
+    height: 32vh;
+}
+.dyBox.x-max{
+    height: 72vh;
 }
