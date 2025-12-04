@@ -88,3 +88,36 @@ h1, h2, h3, h4, h5, h6{
 .dyBox.x-max{
     height: 72vh;
 }
+.inner-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    border-radius: calc(3vh / 0.618);
+}
+.left-section{
+    display: flex;
+    align-items: center;
+    width: calc(100% - 10vh);
+    height: 100%;
+    color: #fffb;
+    padding-left: calc(2vh / 0.618);
+    box-sizing: border-box;
+    font-size: 0.9em;
+}
+.upload-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vh;
+    height: 10vh;
+    scale: 0.85;
+    border-radius: 50%;
+    background: #fff;
+}
+.upload-btn .icon.new-file{
+    fill: #136cb9;
+    width: 2.25em;
+    height: 2.25em;
+
+}
