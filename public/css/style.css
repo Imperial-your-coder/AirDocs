@@ -1,3 +1,16 @@
+@media screen and (min-width: 768px) {
+    .main * {
+        display: none;
+    }
+    .main::before{
+        content: 'This application is not available on large screens. Please use a device with a smaller screen.';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+    }
+    
+}
 body{
     background: #000;
     font-family: 'Avenir';
@@ -50,7 +63,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .dyBox{
     width: 100%;
-    background: #fff3;
+    background: #ffffff18;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     -moz-backdrop-filter: blur(5px);
